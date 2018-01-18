@@ -475,23 +475,23 @@
         menu_data.push({id: 221, pid:22, name: "活动·待审核",link: '/activity_manage'});
         menu_data.push({id: 222, pid:22, name: "活动·已审核",link: '/activity_manage'});
 
-        var data={  main:{	hd_code: 1  },
-            detail: [{ 	pro_id: 111 		},   {  pro_id: 222  } 	] }
-            console.log(data);
-
-        $.ajax({
-            type:"post",
-            url:'/buy/inbill',
-            datType: "JSON",
-            contentType:'application/json; charset=utf-8',
-            data:JSON.stringify(data),
-            success:function (back) {
-                alert(back)
-            },
-            error:function () {
-                alert(0)
-            },
-        })
+//        var data={  main:{	hd_code: 1  },
+//            detail: [{ 	pro_id: 111 		},   {  pro_id: 222  } 	] }
+//            console.log(data);
+//
+//        $.ajax({
+//            type:"post",
+//            url:'/buy/inbill',
+//            datType: "JSON",
+//            contentType:'application/json; charset=utf-8',
+//            data:JSON.stringify(data),
+//            success:function (back) {
+//                alert(back)
+//            },
+//            error:function () {
+//                alert(0)
+//            },
+//        })
     </script>
 <!--    <script src="/js/page.js"></script>-->
     <script src="/js/index.js"></script>
