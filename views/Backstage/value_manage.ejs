@@ -1,0 +1,253 @@
+<div id="status_type_page">
+    <input type="hidden" id="seq_no_edit">
+    <input type="hidden" id="name_edit">
+    <!--start-->
+    <div style="float: left;width: 98%;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+
+                <style>
+                    .div_row label {
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+
+                    .div_wrapper {
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+
+                    .div_wrapper input, .div_wrapper select {
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">数据编号</label>
+                    <div class="div_wrapper">
+                        <input name="sysSet" id="sysSet" maxlength="6">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">数据名称</label>
+                    <div class="div_wrapper">
+                        <input name="parentName" id="parentName"  maxlength="20">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">英文名称</label>
+                    <div class="div_wrapper">
+                        <input name="parentEn" id="parentEn"  maxlength="20">
+                    </div>
+                </div>
+                </div>
+
+            <div style="width: 10%;float: left;margin-top: 0px">
+                <div id="employeeSeatchBut" style="float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div>
+            </div>
+        </div>
+        <div style="width: 100%;min-height: 320px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="value_Table1">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 25%;" align="center">
+                        <div class="t text-left" >数据编号<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 25%;" align="center">
+                        <div class="t">数据名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 25%;" align="center">
+                        <div class="t">英文名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 25%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">促销费用</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" style="background: rgb(163, 186, 238);"><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">仓库设置</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">开单人员</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">零售设定</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">计划指标</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">内销额度</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">客户类型</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd" ><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;color: #0000cc;cursor:pointer;" data-id="1003">1003</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">收付款方式</div></td><td><div class="text-center employee_child" data-id="1003" style="font-size: 14px;">BATTERY</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="1003" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="1003" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload" id="addStaffModal" data-toggle="modal"><i class="icon-plus-sign"></i>添加新数据</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div style="float: left;width: 98%;margin: 20px 0px 0px 20px; " id="mapping_div2">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px" id="xltext">
+            <div style="float: left;font-size: 14px;color: #666666;padding-left: 14px;">子类编号</div>
+            <div style="float: left;margin-left:16px;"><input name="sysSetxl" id="sysSetzl_q" style="width: 92px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 0px"  maxlength="6"></div>
+            <div style="float: left;font-size: 14px;color: #666666;padding-left: 14px">子类名称</div>
+            <div style="float: left;margin-left:16px;"><input name="childName" id="childName_q" style="width: 92px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 0px" ></div>
+            <input id="parentId" type="hidden" name="parentId" maxlength="20">
+            <div id="employeeSeatchBut_zl" style="float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div>
+        </div>
+        <div style="width: 100%;min-height: 320px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="value_Table2">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 33%;" align="center">
+                        <div class="t text-left" >子类编号<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 33%;" align="center">
+                        <div class="t">子类名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 33%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row" class="odd"><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;">100201</div></td><td><div class="text-center employee_child" style="font-size: 14px;">仓库一</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="100201" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="100201" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd"><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;">100202</div></td><td><div class="text-center employee_child" style="font-size: 14px;">仓库二</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="100201" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="100201" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+                <tr role="row" class="odd"><td class="sorting_1"><div class="text-center employee_child" style="font-size: 14px;">100203</div></td><td><div class="text-center employee_child" style="font-size: 14px;">仓库三</div></td><td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="100201" data-toggle="modal">更改</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="100201" data-toggle="modal">删除</a></li>   </ul></div></td></tr>
+
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload" id="addStaffModalzl" data-toggle="modal"><i class="icon-plus-sign"></i>添加新数据</a>
+                </div>
+            </nav>
+
+
+        </div>
+    </div>
+
+    <div class="modal modal-noline fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post"   id="add_form">
+                                <input id="seq_no_zl" type="hidden" name="seq_no_zl">
+                                <input id="res" name="res" type="reset" style="display:none;" />
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 135px;margin: 0px 0px 0 28px;">添加数据</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-15">数据编号：</label>
+                                    <div class="w-30 relative">
+                                        <input id="a_sysset" class="form-control"  type="text" name="a_sysset" maxlength="6" placeholder="系统自动生产" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-15">数据名称：</label>
+                                    <div class="w-30 relative">
+                                        <input id="a_parentname" class="form-control"  type="text" name="a_parentname" maxlength="20"  placeholder="请输入数据名称" data-rule="required;">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-15">英文名称：</label>
+                                    <div class="w-30 relative">
+                                        <input id="a_parenten" class="form-control"  type="text" name="a_parenten" maxlength="20"   placeholder="请输入英文名称" data-rule="required;">
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_btn" type="button" class="btn btn-success w-14 font-16 float-none ml-2">确认</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-noline fade" id="addModalzl" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post"   id="addzl_form">
+                                <input id="seq_no" type="hidden" name="seq_no">
+                                <input id="res" name="res" type="reset" style="display:none;" />
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 135px;margin: 0px 0px 0 28px;">编辑子类</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-15">子类编号：</label>
+                                    <div class="w-30 relative">
+                                        <input id="sysSet_zl" name="sysSet_zl" class="form-control"  type="text"  maxlength="6" placeholder="系统自动生产" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-15">子类名称：</label>
+                                    <div class="w-30 relative">
+                                        <input id="childName" name="childName" class="form-control"  type="text"  maxlength="20" placeholder="请输入子类名称" data-rule="required;">
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_btn_zl" type="button" class="btn btn-success w-14 font-16 float-none ml-2">确认</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出删除确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureDel" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要删除该数据类型吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="del_btn"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--私有js-->
+<script src="/js/table-ajax.js"></script>
+<script src="/js/Backstage/status_type.js"></script>
+    <!--end-->

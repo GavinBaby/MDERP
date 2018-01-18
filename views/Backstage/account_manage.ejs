@@ -1,0 +1,260 @@
+<div id="company_manage_page">
+    <input type="hidden" id="seq_no_edit">
+    <input type="hidden" id="name_edit">
+    <!--start-->
+    <div style="float: left;width: 98%;min-height: 700px;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+                <style>
+                    .div_row label{
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                    .div_wrapper{
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+                    .div_wrapper input,.div_wrapper select{
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">账户名称</label>
+                    <div class="div_wrapper">
+                        <input name="username_s" id="username_s" style="margin-top:22px" >
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">角色</label>
+                    <div class="div_wrapper">
+                        <select id="status_q" name="status_q">
+                            <option value="">请选择</option>
+                            <option value="1">角色一</option>
+                            <option value="2">角色二</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 10%;float: left;">
+                <div id="employeeSeatchBut" style="cursor:pointer;float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div>
+            </div>
+        </div>
+        <div style="width: 100%;min-height: 560px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="account_Table">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 18%;" align="center">
+                        <div class="t text-left" >账户名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 18%;" align="center">
+                        <div class="t">真实姓名<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width:16%;" align="center">
+                        <div class="t">角色类型<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 16%" align="center">
+                        <div class="t">创建时间<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 16%;" align="center">
+                        <div class="t">状态<span class="sort-ico" style="padding-top:10px;"><i class=" dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 16%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody id="start">
+                <tr role="row" class="odd">
+                    <td class="sorting_1"><div class="text-center" style="font-size: 14px;">账户名称</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">CD</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">管理员</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">2017-11-01</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">正常</div></td>
+                    <td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="5" data-toggle="modal">更改</a></li><li><a class="employee_stop" href="javascript:void(0)" data-id="5" data-name="testcompany" data-toggle="modal">停用</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="5" data-toggle="modal">删除</a></li>   </ul></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td class="sorting_1"><div class="text-center" style="font-size: 14px;">账户名称</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">CD</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">管理员</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">2017-11-01</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">正常</div></td>
+                    <td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="5" data-toggle="modal">更改</a></li><li><a class="employee_stop" href="javascript:void(0)" data-id="5" data-name="testcompany" data-toggle="modal">停用</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="5" data-toggle="modal">删除</a></li>   </ul></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td class="sorting_1"><div class="text-center" style="font-size: 14px;">账户名称</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">CD</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">管理员</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">2017-11-01</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">正常</div></td>
+                    <td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="5" data-toggle="modal">更改</a></li><li><a class="employee_stop" href="javascript:void(0)" data-id="5" data-name="testcompany" data-toggle="modal">停用</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="5" data-toggle="modal">删除</a></li>   </ul></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td class="sorting_1"><div class="text-center" style="font-size: 14px;">账户名称</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">CD</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">管理员</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">2017-11-01</div></td>
+                    <td><div class="text-center" style="font-size: 14px;">正常</div></td>
+                    <td><div class="drop-opt"><a href="javascript:;" id="dropLabel-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">操作列表<span class="icon-chevron-down"></span></a><ul class="drop-cnt in" role="menu" aria-labelledby="dropLabel-1"><li><a class="employee_edit" href="javascript:void(0)" data-id="5" data-toggle="modal">更改</a></li><li><a class="employee_stop" href="javascript:void(0)" data-id="5" data-name="testcompany" data-toggle="modal">停用</a></li><li><a class="employee_del" href="javascript:void(0)" data-id="5" data-toggle="modal">删除</a></li>   </ul></div></td>
+                </tr>
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload"  data-toggle="modal" id="addAccount"><i class="icon-plus-sign"></i>添加用户</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="modal modal-noline fade" id="addAccountModel" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post"   id="add_form">
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">添加新用户</label>
+                                </div>
+
+                                <div class="form-group ">
+                                    <label class="control-label w-10">用户编号：</label>
+                                    <div class="w-30 ">
+                                        <input id="seq_no"  class="form-control"  type="text" name="seq_no"  placeholder="系统自动生成" maxlength="15"  disabled >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-10">账号名称：</label>
+                                    <div class="w-30 ">
+                                        <input id="username"  class="form-control"  type="text" name="username" placeholder="请输入账号" data-rule="required;"  maxlength="15"  >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-10">账号密码：</label>
+                                    <div class="w-30 ">
+                                        <input id="password" class="form-control" type="password" name="password" placeholder="请输入密码" data-rule="required;" maxlength="15" >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-10">真实姓名：</label>
+                                    <div class="w-30 ">
+                                        <input id="password" class="form-control" type="password" name="password" placeholder="请输入密码" data-rule="required;" maxlength="15" >
+                                    </div>
+                                </div>
+                                <div class="form-group " style="display: none">
+                                    <label class="control-label w-10">角色类型：</label>
+                                    <div class="w-30 ">
+                                        <select class="form-control" name="roleId" id="roleId" data-rule="required;">
+                                            <option  value="">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" >取消</button>
+                                    <button id="save_account" type="button" class="btn btn-success w-14 font-16 float-none ml-2">确认</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出删除确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureDel" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要删除该用户吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="del_button"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出停用确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureStop" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要停用该用户吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="stop_button"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出启用确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureStart" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要启用该用户吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="start_button"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--私有js-->
+<script src="/js/table-ajax.js"></script>
+<script>
+    $("#addAccount").on("click",function(){
+        $("#addAccountModel").modal('show');
+    })
+</script>
+<!--<script src="js/Backstage/company_manage.js"></script>-->
+<!--end-->
