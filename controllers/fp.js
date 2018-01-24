@@ -11,8 +11,6 @@ var util = require('../lib/util.js');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var filter = require('../lib/filter');
-var t_buy_inbill = require('../models/table').t_buy_inbill;
-var t_buy_inbill_detail = require('../models/table').t_buy_inbill_detail;
 var t_buy_invoice = require('../models/table').t_buy_invoice;
 var t_buy_invoice_detail = require('../models/table').t_buy_invoice_detail;
 var t_buy_pay = require('../models/table').t_buy_pay;
@@ -65,26 +63,13 @@ module.exports = function (app) {
 //{"main":{"code":1},"detail":[{"pro_id":111},{"pro_id":222}]}
     router.post('/pay',function (req, res) {
         var main = req.body.main;
-        var detail = req.body.detail;
         //付款日期,付款人, 付款金额,付款编号，备注,入库单号，发票号，付款类型,,付款标志, 供应商，制单人，制单时间，预付款，记录单号，销账人，销账日期
         main= _.pick(main,'pay_date','pay_man','pay_total','pay_no','remark','bill_no','invoice_no','pay_type','pay_flag',
             'supplier_id','supplier_code' ,'supplier_name','create_man','create_time','pre_pay','record_no','cancal_man','cancal_date');
         main.create_time = moment(main.create_time).format('YYYY-MM-DD HH:mm:ss');
         main.isdeleted = 0;
-        bookshelf.transaction(function (t) {
-            return knex.max('id as id').from('t_buy_invoice').then(function (data) {
-                main.id = (data[0].id || 0) + 1;
-                detail.forEach(function (e,i) {
-                    //产品id,name,收货单号， 本次开票数量，金额
-                    detail[i] = _.pick(detail[i], 'pro_id', 'pro_name', 'billno', 'num', 'amount','is_part');
-                    detail[i].main_id = main.id;
-                });
-                return t_buy_invoice.query().insert(main);
-            }).then(function (data) {
-                return t_buy_invoice_detail.query().insert(detail);
-            }).then(function (data) {
+         t_buy_pay.query().insert(main) .then(function (data) {
                 res.send({code: 1});
-            })
         }).catch(function (err) {
             console.log("!"+err.message+"!")
             res.send({code:-1,text:err.message});
