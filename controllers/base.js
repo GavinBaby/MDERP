@@ -1,15 +1,5 @@
 ﻿var express = require('express');
 var router = express.Router();
-var uuid = require('node-uuid');
-var moment = require('moment');
-var _ = require('underscore');
-var Promise = require("bluebird");
-var knex = require('../lib/common/mysqlClient').knex;
-var BusinessError = require('../lib/common/errors/businessError');
-var util = require('../lib/util.js');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var filter = require('../lib/filter');
 var t_b_customer = require('../models/table').t_b_customer;
 var t_b_product = require('../models/table').t_b_product;
 var t_b_supplier = require('../models/table').t_b_supplier;
@@ -55,6 +45,7 @@ module.exports = function (app) {
             res.send('0');
         })
     });
+
 
 
 

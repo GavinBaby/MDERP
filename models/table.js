@@ -42,4 +42,8 @@ table.t_dic = bookshelf.Model.extend({
     tableName: 't_dic'
 });
 
+table.t_apply_daily = bookshelf.Model.extend({
+    tableName: 't_apply_daily'
+});
+
 module.exports = table;
